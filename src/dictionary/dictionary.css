@@ -1,0 +1,8 @@
+p {
+  letter-spacing: 3px;
+}
+
+.row__main form {
+  width: 100%;
+  display: grid;
+}
