@@ -5,10 +5,12 @@ import WordInfo from "../WordInfo";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState(null);
+  let [wordInfo, setWordInfo] = useState(null);
 
   function handleResponse(response) {
     //console.log(response.data[0]);
-    console.log(response.data[0].meanings[0].definitions[0].definition);
+    setWordInfo(response.data[0]);
+    //console.log(response.data[0].meanings[0].definitions[0].definition);
   }
 
   function search(event) {
@@ -39,7 +41,7 @@ export default function Dictionary() {
           />
         </form>
       </div>
-      <WordInfo />
+      <WordInfo wordInfo={wordInfo} />
     </div>
   );
 }
