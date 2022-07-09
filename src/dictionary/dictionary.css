@@ -6,3 +6,9 @@ p {
   width: 100%;
   display: grid;
 }
+
+input {
+  padding: 10px 0 10px 10px;
+  border: solid 0.5px cadetblue;
+  border-radius: 8px;
+}
