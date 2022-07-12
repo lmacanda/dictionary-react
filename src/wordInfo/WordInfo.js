@@ -1,8 +1,8 @@
 import React from "react";
 import Meaning from "../meaning/Meaning";
+import Phonetic from "../Phonetic";
 
 export default function WordInfo(props) {
-  console.log(props.wordInfo);
   if (props.wordInfo) {
     return (
       <div className="container container__wordInfo">
@@ -11,7 +11,13 @@ export default function WordInfo(props) {
             <h1 className="text-center mb-0">{props.wordInfo.word}</h1>
           </div>
           <div className="col-4 mt-2 col__phoenetic align-self-end">
-            <h2 className="text-center mb-0">{props.wordInfo.phonetic}</h2>
+            {props.wordInfo.phonetics.map(function (phonetic, index) {
+              return (
+                <div key={index}>
+                  <Phonetic phonetic={phonetic} />
+                </div>
+              );
+            })}
           </div>
         </div>
         {props.wordInfo.meanings.map(function (meaning, index) {

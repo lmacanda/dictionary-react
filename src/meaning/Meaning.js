@@ -3,7 +3,6 @@ import "./meaning.css";
 import Synonyms from "../synonyms/Synonyms";
 
 export default function Meaning(props) {
-  console.log(props.meaning);
   return (
     <div className="container container__meaning">
       <div className="row row__meaning">
@@ -12,7 +11,6 @@ export default function Meaning(props) {
         </div>
         <div className="col col__meaning border">
           {props.meaning.definitions.map(function (definition, index) {
-            console.log(definition);
             return (
               <div className="mb-2 mt-2" key={index}>
                 {definition.definition}
