@@ -1,0 +1,11 @@
+.synonyms:first-child {
+  margin-top: 0.5rem;
+}
+
+.synonyms:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.synonyms h6 {
+  font-style: italic;
+}
