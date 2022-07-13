@@ -9,11 +9,30 @@
 }
 
 body {
-  background-color: #474b4e;
-  color: rgb(255, 255, 244);
+  background-color: #83ae9b;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-size: 8.5rem;
+}
+
+h2 {
+  color: black;
+}
+
+h6 {
+  color: rgb(239, 69, 102);
+}
+
+div .frame {
+  border: solid 1px #f2f7f4;
+}
+
+a {
+  text-decoration: none;
 }

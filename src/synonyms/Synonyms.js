@@ -6,10 +6,10 @@ export default function Synonyms(props) {
     return (
       <div className="container container__synonyms">
         <div className="row">
-          <div className="col-2 border">
+          <div className="col-2 frame">
             <h6 className="text-end mt-2">Synonyms</h6>
           </div>
-          <div className="col border">
+          <div className="col frame">
             {props.synonyms.map(function (synonyms, index) {
               return (
                 <div className="synonyms" key={index}>

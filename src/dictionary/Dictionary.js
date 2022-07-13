@@ -25,25 +25,23 @@ export default function Dictionary() {
   }
 
   return (
-    <div className="container dictionary__container">
-      <div className="row row__main pt-5 justify-content-center">
-        <div className="col-6">
-          <h2 className="text-end fs-3">Are You Looking for a word?</h2>
-        </div>
-        <div className="col-6 align-self-center">
-          <form onSubmit={search}>
-            <input
-              type="search"
-              placeholder="Enter a word"
-              id="word"
-              aria-label="search"
-              autoFocus="on"
-              onChange={handleKeywordChange}
-            />
-          </form>
-        </div>
-        <WordInfo wordInfo={wordInfo} />
+    <div className="row row__main pt-5 justify-content-center">
+      <div className="col-6">
+        <h2 className="text-end fs-3">Are You Looking for a word?</h2>
       </div>
+      <div className="col-6 align-self-center">
+        <form onSubmit={search}>
+          <input
+            type="search"
+            placeholder="Enter a word"
+            id="word"
+            aria-label="search"
+            autoFocus="on"
+            onChange={handleKeywordChange}
+          />
+        </form>
+      </div>
+      <WordInfo wordInfo={wordInfo} />
     </div>
   );
 }
