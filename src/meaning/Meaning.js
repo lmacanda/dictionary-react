@@ -15,7 +15,9 @@ export default function Meaning(props) {
               <div className="mb-2 mt-2" key={index}>
                 {definition.definition}
                 <br />
-                <em>{definition.example}</em>
+                <small>
+                  <em>{definition.example}</em>
+                </small>
               </div>
             );
           })}

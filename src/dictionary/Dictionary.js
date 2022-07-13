@@ -7,6 +7,10 @@ export default function Dictionary() {
   let [keyword, setKeyword] = useState(null);
   let [wordInfo, setWordInfo] = useState(null);
 
+  function handlePexelsResponse(response) {
+    console.log(response);
+  }
+
   function handleResponse(response) {
     //console.log(response.data[0]);
     setWordInfo(response.data[0]);
@@ -18,6 +22,16 @@ export default function Dictionary() {
     // documentation: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
+
+    let pexelsApiKey =
+      "563492ad6f9170000100000110967cfc0fe44dca947a95e8b906bfdb";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios
+      .get(pexelsApiUrl, {
+        headers: headers,
+      })
+      .then(handlePexelsResponse);
   }
 
   function handleKeywordChange(event) {
