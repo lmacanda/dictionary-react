@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./dictionary.css";
 import WordInfo from "../wordInfo/WordInfo";
+import Photos from "../Photos";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState(null);
   let [wordInfo, setWordInfo] = useState(null);
+  let [photos, setPhotos] = useState(null);
 
   function handlePexelsResponse(response) {
-    console.log(response);
+    setPhotos(response.data.photos);
   }
 
   function handleResponse(response) {
@@ -25,7 +27,7 @@ export default function Dictionary() {
 
     let pexelsApiKey =
       "563492ad6f9170000100000110967cfc0fe44dca947a95e8b906bfdb";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     let headers = { Authorization: `Bearer ${pexelsApiKey}` };
     axios
       .get(pexelsApiUrl, {
@@ -39,23 +41,26 @@ export default function Dictionary() {
   }
 
   return (
-    <div className="row row__main pt-5 justify-content-center">
-      <div className="col-6">
-        <h2 className="text-end fs-3">Are You Looking for a word?</h2>
+    <div>
+      <div className="row row__main pt-5 justify-content-center">
+        <div className="col-6">
+          <h2 className="text-end fs-3">Are You Looking for a word?</h2>
+        </div>
+        <div className="col-6 align-self-center">
+          <form onSubmit={search}>
+            <input
+              type="search"
+              placeholder="Enter a word"
+              id="word"
+              aria-label="search"
+              autoFocus="on"
+              onChange={handleKeywordChange}
+            />
+          </form>
+        </div>
+        <WordInfo wordInfo={wordInfo} />
       </div>
-      <div className="col-6 align-self-center">
-        <form onSubmit={search}>
-          <input
-            type="search"
-            placeholder="Enter a word"
-            id="word"
-            aria-label="search"
-            autoFocus="on"
-            onChange={handleKeywordChange}
-          />
-        </form>
-      </div>
-      <WordInfo wordInfo={wordInfo} />
+      <Photos photos={photos} />
     </div>
   );
 }

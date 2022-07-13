@@ -11,7 +11,7 @@ function App() {
         <main className="main__container pt-0">
           <Dictionary />
         </main>
-        <footer className="text-center">
+        <footer className="text-center mt-3 mb-5">
           <small>Coded by Laura Pantano</small>
         </footer>
       </div>

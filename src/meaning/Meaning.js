@@ -26,6 +26,7 @@ export default function Meaning(props) {
       <div className="row">
         <Synonyms synonyms={props.meaning.synonyms} />
       </div>
+      <br />
     </div>
   );
 }

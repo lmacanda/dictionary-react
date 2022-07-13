@@ -18,3 +18,9 @@ input {
   border: solid 0.5px cadetblue;
   border-radius: 8px;
 }
+
+.photos__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
