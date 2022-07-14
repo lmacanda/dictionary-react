@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Mono:wght@300;400;500;600&family=Rubik+Moonrocks&family=Rubik:wght@300&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +11,8 @@
 }
 
 body {
-  background-color: #83ae9b;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  background-color: #f7d7b0;
+  font-family: "Rubik", sans-serif;
 }
 
 h1 {
@@ -22,17 +20,25 @@ h1 {
 }
 
 h2 {
-  color: black;
+  color: rgb(239, 69, 102);
+  letter-spacing: 7px;
+  margin-top: 8px;
 }
 
 h6 {
   color: rgb(239, 69, 102);
+  transform: rotate(5deg);
 }
 
 div .frame {
-  border: solid 1px #f2f7f4;
+  border: solid 1px #f7d7b0;
 }
 
 a {
   text-decoration: none;
+  color: rgb(239, 69, 102);
+}
+
+a:hover {
+  color: rgb(82, 6, 105);
 }

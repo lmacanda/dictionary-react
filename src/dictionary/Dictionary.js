@@ -44,7 +44,7 @@ export default function Dictionary() {
     <div>
       <div className="row row__main pt-5 justify-content-center">
         <div className="col-6">
-          <h2 className="text-end fs-3">Are You Looking for a word?</h2>
+          <h2 className="text-end fs-3">Looking for a Word?</h2>
         </div>
         <div className="col-6 align-self-center">
           <form onSubmit={search}>

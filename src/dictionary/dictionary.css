@@ -4,10 +4,6 @@
   box-shadow: 0 5px 15px;
 }
 
-p {
-  letter-spacing: 3px;
-}
-
 .row__main form {
   width: 100%;
   display: grid;
@@ -15,12 +11,7 @@ p {
 
 input {
   padding: 6px 0 6px 10px;
-  border: solid 0.5px cadetblue;
+  border: solid 0.5px #f7d7b0;
   border-radius: 8px;
-}
-
-.photos__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  font-family: "Rubik", sans-serif;
 }

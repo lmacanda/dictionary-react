@@ -1,12 +1,15 @@
 .main__container {
   padding: 50px 50px 50px 50px;
-  margin: 50px 30px 5px 50px;
-  background-color: rgb(241, 217, 239);
-  color: black;
+  margin: 50px 50px 5px 50px;
+  background-color: black;
+  color: rgb(241, 217, 239);
   border-radius: 8px;
 }
 
-p {
+header h1 {
   color: black;
-  font-size: 60px;
+  font-size: 70px;
+  font-family: "Rubik Moonrocks", cursive;
+  letter-spacing: 50px;
+  text-align: center;
 }
