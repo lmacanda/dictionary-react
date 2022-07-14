@@ -1,6 +1,6 @@
 import React from "react";
-import Meaning from "../meaning/Meaning";
-import Phonetic from "../Phonetic";
+import Meaning from "./meaning/Meaning";
+import Phonetic from "./Phonetic";
 
 export default function WordInfo(props) {
   if (props.wordInfo) {

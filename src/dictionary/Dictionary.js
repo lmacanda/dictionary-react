@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./dictionary.css";
-import WordInfo from "../wordInfo/WordInfo";
+import WordInfo from "../WordInfo";
 import Photos from "../Photos";
 
 export default function Dictionary() {
