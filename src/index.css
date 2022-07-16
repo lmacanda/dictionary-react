@@ -35,10 +35,25 @@ div .frame {
 }
 
 a {
-  text-decoration: none;
-  color: rgb(239, 69, 102);
+  color: black;
+  font-size: 25px;
 }
 
 a:hover {
-  color: rgb(82, 6, 105);
+  color: rgb(239, 69, 102);
+}
+
+@media screen and (max-width: 578px) {
+  h1 {
+    font-size: 5.5rem;
+  }
+
+  h2 {
+    margin-left: 4px;
+  }
+
+  h6 {
+    transform: none;
+    margin-left: 2px;
+  }
 }

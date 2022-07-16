@@ -3,12 +3,14 @@ import Synonyms from "../synonyms/Synonyms";
 
 export default function Meaning(props) {
   return (
-    <div className="container container__meaning">
+    <div className="container__meaning">
       <div className="row row__meaning">
-        <div className="col-2 col__partOfSpeech frame">
-          <h6 className="text-end mt-2">{props.meaning.partOfSpeech}</h6>
+        <div className="col-md-2 col-lg-2 col-sm-12 col__partOfSpeech">
+          <h6 className="text-md-end text-lg-end text-sm-start mt-2 me-1">
+            {props.meaning.partOfSpeech}
+          </h6>
         </div>
-        <div className="col col__meaning frame">
+        <div className="col col__meaning">
           {props.meaning.definitions.map(function (definition, index) {
             return (
               <div className="mb-3 mt-2" key={index}>
@@ -22,9 +24,7 @@ export default function Meaning(props) {
           })}
         </div>
       </div>
-      <div className="row">
-        <Synonyms synonyms={props.meaning.synonyms} />
-      </div>
+      <Synonyms synonyms={props.meaning.synonyms} />
       <br />
     </div>
   );

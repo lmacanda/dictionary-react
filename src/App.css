@@ -4,17 +4,41 @@
 }
 
 .main__container {
-  padding: 50px 50px 50px 50px;
-  margin: 50px 50px 5px 50px;
   background-color: black;
   color: rgb(241, 217, 239);
-  border-radius: 8px;
 }
 
 header h1 {
   color: black;
-  font-size: 70px;
+  font-size: 46px;
   font-family: "Rubik Moonrocks", cursive;
-  letter-spacing: 50px;
   text-align: center;
+}
+
+@media screen and (min-width: 578px) {
+  .main__container {
+    padding: 50px 50px 50px 50px;
+    margin: 50px 50px 5px 50px;
+    border-radius: 8px;
+  }
+
+  header h1 {
+    font-size: 70px;
+    letter-spacing: 50px;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .container {
+    padding: 0;
+  }
+
+  .col__meaning {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .col__phonetic {
+    margin-left: 5px;
+  }
 }

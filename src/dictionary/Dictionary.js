@@ -43,10 +43,12 @@ export default function Dictionary() {
   return (
     <div>
       <div className="row row__main pt-5 justify-content-center">
-        <div className="col-6">
-          <h2 className="text-end fs-3">Looking for a Word?</h2>
+        <div className="col-md-6 col-lg-6 col-sm-12">
+          <h2 className="text-md-end text-lg-end text-sm-center fs-3">
+            Looking for a Word?
+          </h2>
         </div>
-        <div className="col-6 align-self-center">
+        <div className="col-md-6 col-lg-6 col-sm-12 align-self-center">
           <form onSubmit={search}>
             <input
               type="search"

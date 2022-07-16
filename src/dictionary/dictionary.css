@@ -15,3 +15,9 @@ input {
   border-radius: 8px;
   font-family: "Rubik", sans-serif;
 }
+
+@media screen and (max-width: 578px) {
+  input {
+    border-radius: 0%;
+  }
+}

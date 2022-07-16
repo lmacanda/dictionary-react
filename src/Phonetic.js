@@ -1,7 +1,8 @@
 import React from "react";
 
 export default function Phonetic(props) {
-  if (props.phonetic.audio) {
+  console.log(props.phonetic);
+  if (props.phonetic.audio && props.phonetic.text) {
     return (
       <div className="phonetic">
         <a href={props.phonetic.audio} target="blank">

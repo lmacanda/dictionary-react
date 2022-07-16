@@ -5,12 +5,12 @@ import Phonetic from "./Phonetic";
 export default function WordInfo(props) {
   if (props.wordInfo) {
     return (
-      <div className="container container__wordInfo">
+      <div className="container__wordInfo">
         <div className="row row__word mb-5 align-item-center">
-          <div className="col-8 col__word mt-2">
+          <div className="col-md-8 col-lg-8 col-sm-12 col__word mt-2">
             <h1 className="text-center mb-0">{props.wordInfo.word}</h1>
           </div>
-          <div className="col-4 mt-2 col__phoenetic align-self-center">
+          <div className="col-md-4 col-lg-4 col-sm-12 mt-2 col__phonetic align-self-center">
             {props.wordInfo.phonetics.map(function (phonetic, index) {
               return (
                 <div key={index}>
